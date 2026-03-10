@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praveen K — Frontend Developer</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;1,6..12,300&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <a href="#hero"
+          style="font-family:'Outfit',sans-serif;font-weight:800;font-size:1.3rem;color:#fff;text-decoration:none;letter-spacing:-0.02em;">
+          PK<span style="color:var(--accent-cyan);">.</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#awards" class="nav-link">Awards</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <a href="mailto:praveenkalaiselvan1408@gmail.com" class="hidden md:flex btn-primary"
+          style="padding:0.55rem 1.4rem;font-size:0.8rem;">Hire Me</a>
+        <button id="menu-toggle" class="md:hidden text-white p-2">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12h18M3 6h18M3 18h18" />
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="md:hidden flex-col px-6 pb-5 gap-4"
+        style="background:var(--bg-surface);border-bottom:1px solid var(--border);">
+        <a href="#about" class="nav-link py-2">About</a>
+        <a href="#skills" class="nav-link py-2">Skills</a>
+        <a href="#experience" class="nav-link py-2">Experience</a>
+        <a href="#projects" class="nav-link py-2">Projects</a>
+        <a href="#awards" class="nav-link py-2">Awards</a>
+        <a href="#contact" class="nav-link py-2">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- ========================================================= HERO -->
+    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
+      <div class="hero-bg"></div>
+      <div class="grid-overlay"></div>
+      <div id="particles-container" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 w-full py-28">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-14">
+
+          <!-- Left: Text -->
+          <div class="flex-1 text-center lg:text-left" id="hero-text">
+            <div class="section-tag mb-5 justify-center lg:justify-start" id="hero-tag">
+              Frontend Developer &nbsp;·&nbsp; Chennai, India
+            </div>
+
+            <h1 id="hero-name"
+              style="font-size:clamp(3.2rem,9vw,6rem);font-weight:800;line-height:1.0;letter-spacing:-0.04em;color:#fff;margin-bottom:1.25rem;">
+              Praveen <span class="gradient-text"> .K</span>
+            </h1>
+
+            <p id="hero-desc"
+              style="color:var(--text-muted);font-size:clamp(0.95rem,2vw,1.15rem);font-weight:300;line-height:1.85;margin:2rem auto ;">
+              Building <strong style="color:var(--accent-cyan);font-weight:500;">responsive</strong>,
+              <strong style="color:var(--accent-purple);font-weight:500;">pixel-perfect</strong> web experiences
+              with <strong style="color:var(--accent-cyan);font-weight:500;">3.5+ years</strong> of frontend
+              craftsmanship.
+            </p>
+
+            <div id="hero-btns" class="flex flex-wrap gap-4 justify-center lg:justify-start mb-10">
+              <a href="#projects" class="btn-primary">View My Work ↓</a>
+              <a href="#contact" class="btn-outline">Let's Talk →</a>
+            </div>
+
+            <!-- Stats -->
+            <div id="hero-stats" class="flex gap-8 justify-center lg:justify-start">
+              <div>
+                <div class="stat-number">3.5<span style="font-size:1.3rem">+</span></div>
+                <div style="font-size:0.7rem;color:var(--text-muted);letter-spacing:0.12em;text-transform:uppercase;">
+                  Years Exp.</div>
+              </div>
+              <div style="width:1px;background:var(--border);"></div>
+              <div>
+                <div class="stat-number text-center">40<span style="font-size:1.3rem">+</span></div>
+                <div style="font-size:0.7rem;color:var(--text-muted);letter-spacing:0.12em;text-transform:uppercase;">
+                  Projects in different platforms</div>
+              </div>
+              <div style="width:1px;background:var(--border);"></div>
+              <div>
+                <div class="stat-number text-center">2</div>
+                <div style="font-size:0.7rem;color:var(--text-muted);letter-spacing:0.12em;text-transform:uppercase;">
+                  Companies</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Avatar -->
+          <div id="hero-avatar" class="flex-shrink-0 flex justify-center">
+            <div class="avatar-wrapper">
+              <div class="avatar-ring"></div>
+              <div class="avatar-inner">
+                <!-- Replace the text below with an <img> tag to add your photo -->
+                <!-- Example: <img src="your-photo.jpg" alt="Praveen K"> -->
+                PK
+              </div>
+              <!-- Available badge -->
+              <div style="position:absolute;bottom:14px;right:-14px;
+                      background:var(--bg-card);border:1px solid var(--border);
+                      border-radius:8px;padding:8px 14px;
+                      display:flex;align-items:center;gap:8px;
+                      box-shadow:0 6px 24px rgba(0,0,0,0.4);">
+                <div style="width:8px;height:8px;border-radius:50%;background:#10B981;
+                        animation:pulseGreen 2s infinite;"></div>
+                <span style="font-size:0.75rem;font-weight:600;font-family:'Outfit',sans-serif;">Available</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= ABOUT -->
+    <section id="about" class="py-24 bg-surface">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="fade-up">
+          <div class="section-tag">About Me</div>
+          <h2 class="section-heading">Crafting Digital <span class="gradient-text">Experiences</span></h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center mt-12">
+          <!-- About text -->
+          <div class="fade-up">
+            <p style="color:var(--text-muted);line-height:1.95;font-size:1.025rem;margin-bottom:1.25rem;">
+              I'm a passionate and detail-oriented
+              <strong style="color:var(--accent-cyan);">Frontend Developer</strong> with
+              <strong style="color:#fff;">3.5 years of experience</strong> building responsive,
+              user-friendly web applications across desktop, tablet, and mobile.
+              I specialise in HTML, CSS, JavaScript, and jQuery — with a sharp eye for UI/UX quality.
+            </p>
+            <p style="color:var(--text-muted);line-height:1.95;font-size:1.025rem;margin-bottom:2rem;">
+              From customising <strong style="color:#fff;">Shopify & BigCommerce</strong> stores to implementing
+              full-scale <strong style="color:#fff;">SEO strategies</strong> and deploying hospitality websites —
+              I bring both technical depth and design sensibility to every project I take on.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div class="flex items-center gap-3">
+                <span style="color:var(--accent-cyan);">📍</span>
+                <span style="font-size:0.875rem;color:var(--text-muted);">Chennai, India</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span style="color:var(--accent-cyan);">🎓</span>
+                <span style="font-size:0.875rem;color:var(--text-muted);">BSc Computer Science</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span style="color:var(--accent-cyan);">🌐</span>
+                <span style="font-size:0.875rem;color:var(--text-muted);">English & Tamil</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span style="color:var(--accent-cyan);">💼</span>
+                <span style="font-size:0.875rem;color:var(--text-muted);">Open to Opportunities</span>
+              </div>
+              <div class="flex items-center gap-3 col-span-2">
+                <span style="color:var(--accent-cyan);">🔗</span>
+                <a href="https://linkedin.com/in/praveen-kalaiselvan" target="_blank"
+                  style="font-size:0.875rem;color:var(--accent-cyan);text-decoration:none;">
+                  linkedin.com/in/praveen-kalaiselvan
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Expertise grid -->
+          <div class="grid grid-cols-2 gap-4 fade-up">
+            <div class="card p-5">
+              <div style="font-size:1.75rem;margin-bottom:0.6rem;">⚡</div>
+              <h4 style="font-weight:700;margin-bottom:0.4rem;font-size:0.95rem;">Performance</h4>
+              <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.65;">PageSpeed, Core Web Vitals & load
+                speed optimisation</p>
+            </div>
+            <div class="card p-5">
+              <div style="font-size:1.75rem;margin-bottom:0.6rem;">🛍️</div>
+              <h4 style="font-weight:700;margin-bottom:0.4rem;font-size:0.95rem;">E-Commerce</h4>
+              <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.65;">Shopify & BigCommerce theme
+                development</p>
+            </div>
+            <div class="card p-5">
+              <div style="font-size:1.75rem;margin-bottom:0.6rem;">📱</div>
+              <h4 style="font-weight:700;margin-bottom:0.4rem;font-size:0.95rem;">Responsive UI</h4>
+              <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.65;">Mobile-first, cross-browser
+                compatible interfaces</p>
+            </div>
+            <div class="card p-5">
+              <div style="font-size:1.75rem;margin-bottom:0.6rem;">🔍</div>
+              <h4 style="font-weight:700;margin-bottom:0.4rem;font-size:0.95rem;">SEO & Analytics</h4>
+              <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.65;">Technical SEO, Schema markup & GA4
+                setup</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= SKILLS -->
+    <section id="skills" class="py-24 bg-primary">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="fade-up text-center mb-14">
+          <div class="section-tag justify-center">Technical Skills</div>
+          <h2 class="section-heading">What I Work <span class="gradient-text">With</span></h2>
+          <div class="section-divider" style="margin:1rem auto 0;"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="card p-6 fade-up">
+            <h3
+              style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:1.1rem;">
+              Web Development
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-badge">HTML5</span><span class="skill-badge">CSS3</span>
+              <span class="skill-badge">JavaScript</span><span class="skill-badge">jQuery</span>
+              <span class="skill-badge">React</span><span class="skill-badge">Bootstrap</span>
+              <span class="skill-badge">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="card p-6 fade-up">
+            <h3
+              style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:1.1rem;">
+              CMS & E-Commerce
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-badge">Shopify</span><span class="skill-badge">BigCommerce</span>
+              <span class="skill-badge">WordPress</span>
+            </div>
+          </div>
+
+          <div class="card p-6 fade-up">
+            <h3
+              style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:1.1rem;">
+              SEO & Analytics
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-badge">SEO</span><span class="skill-badge">Google Search Console</span>
+              <span class="skill-badge">Google Tag Manager</span><span class="skill-badge">GA4</span>
+            </div>
+          </div>
+
+          <div class="card p-6 fade-up">
+            <h3
+              style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:1.1rem;">
+              Tools & Software
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-badge">Git</span><span class="skill-badge">GitLab</span>
+              <span class="skill-badge">AWS CodeCommit</span><span class="skill-badge">VS Code</span>
+              <span class="skill-badge">Postman</span><span class="skill-badge">SonarQube</span>
+              <span class="skill-badge">WinSCP</span><span class="skill-badge">Asana</span>
+            </div>
+          </div>
+
+          <div class="card p-6 fade-up">
+            <h3
+              style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:1.1rem;">
+              Performance & Tracking
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-badge">PageSpeed Insights</span><span class="skill-badge">GTmetrix</span>
+              <span class="skill-badge">Lighthouse</span><span class="skill-badge">GA4</span>
+            </div>
+          </div>
+
+          <div class="card p-6 fade-up">
+            <h3
+              style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-cyan);margin-bottom:1.1rem;">
+              Strengths
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-badge">Mobile-First Design</span>
+              <span class="skill-badge">Cross-Browser Compat.</span>
+              <span class="skill-badge">Team Collaboration</span>
+              <span class="skill-badge">QA & Testing</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= EXPERIENCE -->
+    <section id="experience" class="py-24 bg-surface">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="fade-up mb-14">
+          <div class="section-tag">Work History</div>
+          <h2 class="section-heading">My <span class="gradient-text">Experience</span></h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline-wrap">
+          <div class="timeline-line"></div>
+
+          <!-- Job 1 -->
+          <div class="relative mb-10 fade-up">
+            <div class="timeline-dot"></div>
+            <div class="card p-7">
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-5">
+                <div>
+                  <h3 style="font-size:1.2rem;font-weight:700;color:#fff;">Sr. Web Designer</h3>
+                  <p style="color:var(--accent-cyan);font-size:0.85rem;margin-top:3px;">
+                    Yanolja Cloud Solutions &nbsp;·&nbsp; Surat, India
+                  </p>
+                </div>
+                <span style="background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.22);
+                         color:var(--accent-cyan);padding:4px 14px;border-radius:100px;
+                         font-size:0.72rem;white-space:nowrap;height:fit-content;">
+                  Dec 2025 – Jan 2026
+                </span>
+              </div>
+              <ul
+                style="color:var(--text-muted);font-size:0.875rem;line-height:1.9;list-style:none;display:flex;flex-direction:column;gap:8px;">
+                <li class="flex gap-3"><span class="exp-arrow">→</span> Designed & developed responsive hospitality
+                  websites using the company's proprietary platform ensuring modern UI/UX standards and mobile
+                  optimisation.</li>
+                <li class="flex gap-3"><span class="exp-arrow">→</span> Managed post-launch updates and performance
+                  tracking via Google Tag Manager, Analytics & Search Console.</li>
+                <li class="flex gap-3"><span class="exp-arrow">→</span> Configured XML sitemaps, structured data (Schema
+                  markup), and on-page SEO elements to improve search visibility.</li>
+                <li class="flex gap-3"><span class="exp-arrow">→</span> Executed high-level SEO strategies — keyword
+                  optimisation, meta tag structuring, page speed improvements & technical SEO enhancements.</li>
+                <li class="flex gap-3"><span class="exp-arrow">→</span> Coordinated end-to-end deployment with QA,
+                  performance optimisation and complete client documentation.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Job 2 -->
+          <div class="relative mb-10 fade-up">
+            <div class="timeline-dot"></div>
+            <div class="card p-7">
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-5">
+                <div>
+                  <h3 style="font-size:1.2rem;font-weight:700;color:#fff;">Frontend Developer</h3>
+                  <p style="color:var(--accent-cyan);font-size:0.85rem;margin-top:3px;">
+                    Vinsinfo Private Limited &nbsp;·&nbsp; Chennai, India
+                  </p>
+                </div>
+                <span style="background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.22);
+                         color:var(--accent-cyan);padding:4px 14px;border-radius:100px;
+                         font-size:0.72rem;white-space:nowrap;height:fit-content;">
+                  Feb 2024 – Oct 2025
+                </span>
+              </div>
+              <ul
+                style="color:var(--text-muted);font-size:0.875rem;line-height:1.9;list-style:none;display:flex;flex-direction:column;gap:8px;">
+                <li class="flex gap-3"><span class="exp-arrow">→</span> Developed and maintained responsive web
+                  applications with focus on accessibility, cross-browser compatibility and performance using HTML, CSS,
+                  JS & modern UI frameworks.</li>
+                <li class="flex gap-3"><span class="exp-arrow">→</span> Successfully delivered <strong
+                    style="color:#fff;">20+ BigCommerce projects</strong> including theme customisation, version
+                  upgrades and performance optimisation.</li>
+                <li class="flex gap-3"><span class="exp-arrow">→</span> Customised Shopify & BigCommerce stores to
+                  deliver seamless shopping experiences — boosting site performance and customer engagement.</li>
+                <li class="flex gap-3"><span class="exp-arrow">→</span> Enhanced application performance — improved load
+                  speed and overall user satisfaction.</li>
+                <li class="flex gap-3"><span class="exp-arrow">→</span> Collaborated with designers & backend developers
+                  ensuring mobile-first, user-centric design.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Job 3 -->
+          <div class="relative fade-up">
+            <div class="timeline-dot"></div>
+            <div class="card p-7">
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-5">
+                <div>
+                  <h3 style="font-size:1.2rem;font-weight:700;color:#fff;">Associate Software Developer</h3>
+                  <p style="color:var(--accent-cyan);font-size:0.85rem;margin-top:3px;">
+                    Vinsinfo Private Limited &nbsp;·&nbsp; Chennai, India
+                  </p>
+                </div>
+                <span style="background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.22);
+                         color:var(--accent-cyan);padding:4px 14px;border-radius:100px;
+                         font-size:0.72rem;white-space:nowrap;height:fit-content;">
+                  Jul 2022 – Jan 2024
+                </span>
+              </div>
+              <ul
+                style="color:var(--text-muted);font-size:0.875rem;line-height:1.9;list-style:none;display:flex;flex-direction:column;gap:8px;">
+                <li class="flex gap-3"><span class="exp-arrow">→</span> Built and maintained websites with responsive
+                  layouts and pixel-perfect UI.</li>
+                <li class="flex gap-3"><span class="exp-arrow">→</span> Worked with cross-functional teams to implement
+                  web solutions aligned with business needs.</li>
+                <li class="flex gap-3"><span class="exp-arrow">→</span> Gained hands-on experience in debugging, version
+                  control (Git/GitHub), and CMS/e-commerce platform integration.</li>
+                <li class="flex gap-3"><span class="exp-arrow">→</span> Supported senior developers in customising
+                  Shopify & BigCommerce stores — layout adjustments and theme updates.</li>
+                <li class="flex gap-3"><span class="exp-arrow">→</span> Gained hands-on experience in UI/UX
+                  implementation, responsive design, and cross-browser compatibility.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= PROJECTS -->
+    <section id="projects" class="py-24 bg-primary">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="fade-up mb-14">
+          <div class="section-tag">Portfolio</div>
+          <h2 class="section-heading">Featured <span class="gradient-text">Projects</span></h2>
+          <div class="section-divider"></div>
+          <p style="color:var(--text-muted);max-width:500px;margin-top:1rem;font-size:0.925rem;line-height:1.8;">
+            A selection of work spanning e-commerce platforms, hospitality web solutions, and performance-driven
+            websites.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="card p-6 fade-up">
+            <div style="background:linear-gradient(135deg,rgba(0,212,255,0.1),rgba(124,58,237,0.1));
+                    border-radius:8px;padding:2.25rem 1rem;display:flex;align-items:center;
+                    justify-content:center;margin-bottom:1.4rem;font-size:2.25rem;">🛍️</div>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="project-tag">BigCommerce</span><span class="project-tag">Theme Dev</span>
+            </div>
+            <h3 style="font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">E-Commerce Store Overhaul</h3>
+            <p style="color:var(--text-muted);font-size:0.825rem;line-height:1.75;margin-bottom:1.25rem;">
+              Full BigCommerce theme customisation — version upgrades, performance optimisation, and custom feature
+              additions to boost conversions.
+            </p>
+            <p style="font-size:0.72rem;color:var(--text-muted);">HTML · CSS · JavaScript · BigCommerce</p>
+          </div>
+
+          <div class="card p-6 fade-up">
+            <div style="background:linear-gradient(135deg,rgba(16,185,129,0.1),rgba(0,212,255,0.1));
+                    border-radius:8px;padding:2.25rem 1rem;display:flex;align-items:center;
+                    justify-content:center;margin-bottom:1.4rem;font-size:2.25rem;">🏨</div>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="project-tag">Hospitality</span><span class="project-tag">SEO</span>
+            </div>
+            <h3 style="font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">Hospitality Website Platform</h3>
+            <p style="color:var(--text-muted);font-size:0.825rem;line-height:1.75;margin-bottom:1.25rem;">
+              Responsive hospitality websites with proprietary CMS, complete SEO implementation and full GTM/GA4
+              tracking setup.
+            </p>
+            <p style="font-size:0.72rem;color:var(--text-muted);">HTML · CSS · GTM · GA4 · SEO</p>
+          </div>
+
+          <div class="card p-6 fade-up">
+            <div style="background:linear-gradient(135deg,rgba(124,58,237,0.1),rgba(16,185,129,0.1));
+                    border-radius:8px;padding:2.25rem 1rem;display:flex;align-items:center;
+                    justify-content:center;margin-bottom:1.4rem;font-size:2.25rem;">🚀</div>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="project-tag">Shopify</span><span class="project-tag">Performance</span>
+            </div>
+            <h3 style="font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">Shopify Store Optimisation</h3>
+            <p style="color:var(--text-muted);font-size:0.825rem;line-height:1.75;margin-bottom:1.25rem;">
+              Optimised multiple Shopify stores for load speed and PageSpeed scores — resulting in improved customer
+              engagement and conversions.
+            </p>
+            <p style="font-size:0.72rem;color:var(--text-muted);">Shopify · Liquid · CSS · JavaScript</p>
+          </div>
+
+          <div class="card p-6 fade-up">
+            <div style="background:linear-gradient(135deg,rgba(0,212,255,0.08),rgba(16,185,129,0.08));
+                    border-radius:8px;padding:2.25rem 1rem;display:flex;align-items:center;
+                    justify-content:center;margin-bottom:1.4rem;font-size:2.25rem;">📊</div>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="project-tag">Analytics</span><span class="project-tag">GTM</span>
+            </div>
+            <h3 style="font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">Analytics & Tracking Setup</h3>
+            <p style="color:var(--text-muted);font-size:0.825rem;line-height:1.75;margin-bottom:1.25rem;">
+              End-to-end GA4 & Tag Manager implementation — event tracking, conversion goals, and Search Console
+              integration.
+            </p>
+            <p style="font-size:0.72rem;color:var(--text-muted);">GA4 · GTM · Google Search Console</p>
+          </div>
+
+          <div class="card p-6 fade-up">
+            <div style="background:linear-gradient(135deg,rgba(124,58,237,0.1),rgba(0,212,255,0.08));
+                    border-radius:8px;padding:2.25rem 1rem;display:flex;align-items:center;
+                    justify-content:center;margin-bottom:1.4rem;font-size:2.25rem;">🎨</div>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="project-tag">UI/UX</span><span class="project-tag">Responsive</span>
+            </div>
+            <h3 style="font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">Pixel-Perfect UI Development</h3>
+            <p style="color:var(--text-muted);font-size:0.825rem;line-height:1.75;margin-bottom:1.25rem;">
+              Responsive, pixel-perfect interfaces built from design specs ensuring cross-browser compatibility across
+              all devices.
+            </p>
+            <p style="font-size:0.72rem;color:var(--text-muted);">HTML · CSS · JavaScript · Bootstrap</p>
+          </div>
+
+          <div class="card p-6 fade-up">
+            <div style="background:linear-gradient(135deg,rgba(16,185,129,0.1),rgba(124,58,237,0.08));
+                    border-radius:8px;padding:2.25rem 1rem;display:flex;align-items:center;
+                    justify-content:center;margin-bottom:1.4rem;font-size:2.25rem;">🔍</div>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="project-tag">SEO</span><span class="project-tag">Schema</span>
+            </div>
+            <h3 style="font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">Technical SEO Implementation</h3>
+            <p style="color:var(--text-muted);font-size:0.825rem;line-height:1.75;margin-bottom:1.25rem;">
+              Full technical SEO audit — schema markup, sitemap configuration, meta structuring, and keyword
+              optimisation for better rankings.
+            </p>
+            <p style="font-size:0.72rem;color:var(--text-muted);">SEO · Schema · XML Sitemaps · GTM</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= EDUCATION & AWARDS -->
+    <section id="awards" class="py-24 bg-surface">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16">
+
+          <!-- Education -->
+          <div class="fade-up">
+            <div class="section-tag">Academic</div>
+            <h2 class="section-heading">Education</h2>
+            <div class="section-divider"></div>
+
+            <div class="card p-7 mt-8" style="padding: 57px 20px; border-color:rgba(0,212,255,0.2);">
+              <div class="flex items-start gap-4">
+                <div class="icon-box" style="background:rgba(0,212,255,0.1);">🎓</div>
+                <div>
+                  <h3 style="font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:5px;">BSc Computer Science</h3>
+                  <p style="color:var(--accent-cyan);font-size:0.875rem;margin-bottom:4px;">Bharathidasan University</p>
+                  <p style="color:var(--text-muted);font-size:0.8rem;">Nagapattinam, India &nbsp;·&nbsp; 2019 – 2022</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Awards -->
+          <div class="fade-up">
+            <div class="section-tag">Certification</div>
+            <h2 class="section-heading">Award</h2>
+            <div class="section-divider"></div>
+
+            <div class="award-card p-7 mt-8">
+              <div class="flex items-start gap-4 mb-6">
+                <div class="icon-box" style="background:rgba(124,58,237,0.15);">🏆</div>
+                <div>
+                  <h3 style="font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:5px;">Meta — React Basic</h3>
+                  <p style="color:var(--text-muted);font-size:0.875rem;margin-bottom:4px;">Issued by Meta (Facebook)</p>
+                  <p style="color:var(--text-muted);font-size:0.8rem;">Certification in React fundamentals & component
+                    architecture</p>
+                </div>
+              </div>
+              <!-- 🔴 Replace the href below with your actual LinkedIn post URL -->
+              <a href="https://www.linkedin.com/posts/praveen-kalaiselvan_react-frontenddevelopment-meta-activity-7373633062510919680-u6pI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6Ue-UB8RQro5j7zO1LoPDOUPtF7KGzzL0" target="_blank" rel="noopener noreferrer" class="li-btn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                View Certificate on LinkedIn ↗
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= CONTACT -->
+    <section id="contact" class="py-24 bg-primary">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="fade-up text-center mb-14">
+          <div class="section-tag justify-center">Get In Touch</div>
+          <h2 class="section-heading">Let's Work <span class="gradient-text">Together</span></h2>
+          <div class="section-divider" style="margin:1rem auto 0;"></div>
+          <p style="color:var(--text-muted);max-width:460px;margin:1.25rem auto 0;font-size:0.925rem;line-height:1.8;">
+            I'm open to new opportunities and collaborations. Feel free to reach out anytime!
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <a href="tel:+919360047903" class="contact-item fade-up">
+            <div class="icon-box" style="background:rgba(0,212,255,0.1);">📞</div>
+            <div>
+              <div
+                style="font-size:0.7rem;color:var(--text-muted);margin-bottom:3px;letter-spacing:0.08em;text-transform:uppercase;">
+                Phone</div>
+              <div style="font-size:0.875rem;font-weight:600;">+91 93600 47903</div>
+            </div>
+          </a>
+
+          <a href="mailto:praveenkalaiselvan1408@gmail.com" class="contact-item fade-up">
+            <div class="icon-box" style="background:rgba(0,212,255,0.1);">✉️</div>
+            <div>
+              <div
+                style="font-size:0.7rem;color:var(--text-muted);margin-bottom:3px;letter-spacing:0.08em;text-transform:uppercase;">
+                Email</div>
+              <div style="font-size:0.775rem;font-weight:600;word-break:break-all;">praveenkalaiselvan1408@gmail.com
+              </div>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com/in/praveen-kalaiselvan" target="_blank" class="contact-item fade-up">
+            <div class="icon-box" style="background:rgba(0,212,255,0.1);">💼</div>
+            <div>
+              <div
+                style="font-size:0.7rem;color:var(--text-muted);margin-bottom:3px;letter-spacing:0.08em;text-transform:uppercase;">
+                LinkedIn</div>
+              <div style="font-size:0.875rem;font-weight:600;">praveen-kalaiselvan</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- ========================================================= FOOTER -->
+  <footer style="background:var(--bg-surface);border-top:1px solid var(--border);padding:1.75rem 0;">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div style="font-family:'Outfit',sans-serif;font-weight:800;font-size:1.25rem;color:#fff;">
+        PK<span style="color:var(--accent-cyan);">.</span>
+      </div>
+      <p style="color:var(--text-muted);font-size:0.8rem;text-align:center;">
+        © 2025 Praveen K &nbsp;·&nbsp; Frontend Developer, Chennai
+      </p>
+      <a href="#hero" class="nav-link" style="font-size:0.8rem;">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+ <script src="./assets/js/main.js"></script>
+</html>
